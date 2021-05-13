@@ -2,6 +2,8 @@
     /* Colorful gradient used in the navigation bar */
   --navGradient: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
   --purple: RGBA(54, 54, 95, 1);
+  --blue: RGBA(0, 117, 226, 1);
+  --white-text: RGBA(254, 255, 255, 1);
 }
 
 /* Body font */
@@ -29,16 +31,14 @@ body {
 }
 
 a {
-    color: RGBA(255, 255, 255, 1);
+    color: var(--white-text);
     text-decoration: none;
 }
 
 
 a:visited {
-    color: RGBA(255, 255, 255, 1);
+    color: var(--white-text);
 }
-
-/* Header Styles */  
 
 .page-wrapper {
     max-width: 100%;
@@ -46,9 +46,13 @@ a:visited {
     overflow-x: hidden;
 }
 
+.bold {
+    font-weight: 800;
+}
+
+/* Header Styles */  
 
 .page-header {
-    font-family: Metropolis;
     font-size: 1.25rem;
     font-weight: 400;
     display: flex;
@@ -142,7 +146,7 @@ button:hover {
 
 .page-header-nav nav ul .nav-item #grid-button .grid .cell {
     background: white;
-    border-radius: 15%;
+    border-radius: 1.5px;
     width: 7px;
     height: 7px;
     line-height: 10px;
@@ -164,6 +168,52 @@ button:hover {
 
 
 /* Body Styles */
+
+.main-content {
+    margin-top: 130px;
+    display: block;
+    width: 100%;
+    justify-content: center;
+    padding: 0 155px;
+}
+
+.main-content .article-head {
+    letter-spacing: .1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 0.75;
+    border-bottom: 2.5px solid lightgrey;
+}
+
+.main-content .article-head h1 {
+    font-size: 1.75rem;
+
+}
+
+.main-content .article-head p {
+    font-size: 1.15rem;
+}
+
+.main-content .alias-button-container {
+    margin-top: 15px;
+    float: right;
+}
+
+.main-content .alias-button {
+    font-size: 1.5rem;
+    font-weight: 400;
+    background-color: var(--blue);
+    color: var(--white-text);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 12.5px;
+    margin-right: 5px;
+}
+
+.main-content .alias-button span {
+    font-weight: 600;
+}
 
 /* Footer Styles */
 

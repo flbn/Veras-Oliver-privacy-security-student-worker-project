@@ -22,7 +22,7 @@
     <!-- Put HTML Here -->
 
     <div class="page-wrapper">
-        <header class="page-header">
+        <header class="page-header font-metropolis">
             <a class="logo" href="/" aria-label="Firefox Relay">
                 <img src="assets/img/logo-relay.png" alt="Firefox Relay Logo - Link to the homepage"/>
             </a>
@@ -66,8 +66,19 @@
             </div>
         </header>
 
-        <main>
-            hi
+        <main id="content" class="main-content font-inter" role="main">
+            <article>
+                <div class="article-head">
+                    <h1>Manage your Relay aliases</h1>
+                    <p><span class="bold">4</span> remaining aliases</p>
+                </div>
+
+                <div class="alias-button-container">
+                    <button class="alias-button font-metropolis">
+                        <span>&#43;</span> Generate New Alias
+                    </button>
+                </div>
+            </article>
         </main>
     </div>
     
@@ -89,6 +100,6 @@ Live Server extension for VsCode
 purple in header: RGB(56, 52, 95)
 white background: RGB(250, 250, 250) *look at the triangle gradiant*
 white for menu option: RGB(254, 255, 254)
-blue for buttons: RGB(0, 117, 226)
+blue for buttons: RGBA(0, 117, 226, 1)
 
 -->
