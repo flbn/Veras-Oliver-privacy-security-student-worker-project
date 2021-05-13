@@ -9,17 +9,86 @@
     <link rel="shortcut icon" href="https://www.mozilla.org/media/img/favicons/mozilla/favicon.d25d81d39065.ico">
     <link rel="stylesheet" href="assets/fonts.css">
     <link rel="stylesheet" href="assets/styles.css">
+
+    <!-- Miscellanious Meta Tags -->
+    <meta name="author" content="Oliver Veras" >
+    <meta name="description" content="My submission for the Security and Privacy internship at Mozilla. Feel free to explore my personal site and maybe leave me a sketch at https://www.ovrs.io or have a look around on my digital stream at https://stream.ovrs.io. Thanks for considering me! :)">
+    <meta name="keywords" content="Mozilla, UI, HTML, CSS, JavaScript">
+
+    <script src="assets/app.js"></script>
 </head>
 
 <body>
     <!-- Put HTML Here -->
+
+    <div class="page-wrapper">
+        <header class="page-header">
+            <a class="logo" href="/" aria-label="Firefox Relay">
+                <img src="assets/img/logo-relay.png" alt="Firefox Relay Logo - Link to the homepage"/>
+            </a>
+
+            <div class="page-header-nav">
+                <nav>
+                    <ul>
+                        <li class="nav-item">
+                            <a id="home" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/FAQ.html">FAQ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <button id="grid-button" onclick="toggleClass()">
+                                <div class="grid">
+                                    <div class="cell"></div>
+                                    <div class="cell"></div>
+                                    <div class="cell"></div>
+                                    <div class="cell"></div>
+                                    <div class="cell"></div>
+                                    <div class="cell"></div>
+                                    <div class="cell"></div>
+                                    <div class="cell"></div>
+                                    <div class="cell"></div>
+                                </div>
+                            </button>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <button id="circle-button" onclick="toggleClass()">
+                                <div class="profile-icon">
+                                </div>
+                            </button>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            hi
+        </main>
+    </div>
     
     <!-- 
         Font Awesome v5 Free - See https://fontawesome.com/start for more info
         Example usage: <i class="fas fa-toggle-off"></i>
      -->
     <script src="https://kit.fontawesome.com/4c55e184d1.js" crossorigin="anonymous"></script>
-    <script src="assets/app.js"></script>
 </body>
 
 </html>
+
+<!-- design tools used
+Color Picker extension for Firefox
+Live Server extension for VsCode
+-->
+
+<!-- colors for css 
+purple in header: RGB(56, 52, 95)
+white background: RGB(250, 250, 250) *look at the triangle gradiant*
+white for menu option: RGB(254, 255, 254)
+blue for buttons: RGB(0, 117, 226)
+
+-->
