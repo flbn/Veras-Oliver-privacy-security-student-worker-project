@@ -3,7 +3,9 @@
   --navGradient: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
   --purple: RGBA(54, 54, 95, 1);
   --blue: RGBA(0, 117, 226, 1);
-  --white-text: RGBA(254, 255, 255, 1);
+  --white: RGBA(254, 255, 255, 1);
+  --grey: RGBA(188, 188, 189, 1);
+  --grey-seeThrough: RGBA(188, 188, 189, 0.3);
 }
 
 /* Body font */
@@ -27,17 +29,20 @@ body {
     min-height: 100vh;
     margin: 0;
     line-height: 1.75;
-    text-rendering: optimizeSpeed;
 }
 
 a {
-    color: var(--white-text);
+    color: var(--white);
     text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
 }
 
 
 a:visited {
-    color: var(--white-text);
+    color: var(--white);
 }
 
 .page-wrapper {
@@ -173,8 +178,12 @@ button:hover {
     margin-top: 130px;
     display: block;
     width: 100%;
+                            height: 100vh; /* fix this! */
     justify-content: center;
     padding: 0 155px;
+    background-image: url("/assets/img/background.svg");
+    background-repeat: no-repeat;
+    background-color: var(--white);
 }
 
 .main-content .article-head {
@@ -196,7 +205,7 @@ button:hover {
 }
 
 .main-content .alias-button-container {
-    margin-top: 15px;
+    margin-top: 20px;
     float: right;
 }
 
@@ -204,15 +213,159 @@ button:hover {
     font-size: 1.5rem;
     font-weight: 400;
     background-color: var(--blue);
-    color: var(--white-text);
+    color: var(--white);
     border: none;
-    border-radius: 5px;
+    border-radius: 8.5px;
     padding: 10px 12.5px;
     margin-right: 5px;
 }
 
 .main-content .alias-button span {
     font-weight: 600;
+}
+
+.account-content {
+    display: block;
+    margin-top: 100px;
+}
+
+.account-content-header {
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--grey);
+    width: 100%;
+    padding: 0 10px;
+}
+
+.account-content-header .account-content-header-item {
+    display: inline-block;
+}
+
+.account-content-header button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--grey);
+    margin-left: 10px;
+}
+
+.slider-container {
+    justify-content: right;
+	flex-wrap: wrap;
+}
+
+.slider-header {
+    display: inline;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42.5px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--grey);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    border-radius: 50%;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 5px;
+    bottom: 5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--blue);
+}
+
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--grey);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16.5px);
+    -ms-transform: translateX(16.5px);
+    transform: translateX(16.5px);
+}
+
+.accounts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    padding: 0px 15px;
+    border-radius: 5px;
+    box-sizing: content-box;
+    box-shadow: 0px 0px 3px 1px var(--grey-seeThrough);
+    -webkit-box-shadow: 0px 0px 3px 1px var(--grey-seeThrough);
+    -moz-box-shadow: 0px 0px 3px 1px var(--grey-seeThrough);
+}
+
+.account-name h3 {
+    display: inline;
+}
+
+.account-name button {
+    display: inline;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--grey);
+    margin-left: 10px;
+}
+
+.show-details p {
+    display: inline;
+}
+
+.show-details button {
+    display: table-cell;
+    vertical-align: bottom;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--grey);
+    margin-left: 10px;
+}
+
+.account-email-info {
+    display: flex;
+}
+
+.account-email-info span {
+    display: block;
+}
+
+.account-email-info .email-info-text {
+    padding-left: 50px;
+    display: inline;
+    text-align: center;
 }
 
 /* Footer Styles */
