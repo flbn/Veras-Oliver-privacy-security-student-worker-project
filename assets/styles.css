@@ -2,6 +2,7 @@
     /* Colorful gradient used in the navigation bar */
   --navGradient: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
   --purple: RGBA(54, 54, 95, 1);
+  --secondary-purple: RGBA(50, 50, 100, 1);
   --blue: RGBA(0, 117, 226, 1);
   --white: RGBA(254, 255, 255, 1);
   --grey: RGBA(128, 128, 128, 1);
@@ -91,7 +92,6 @@ a:visited {
 
 .header-logo img {
     width: 285px;
-    
 }
 
 .page-header-nav {
@@ -100,6 +100,7 @@ a:visited {
     align-items: center;
     justify-content: right;
 	flex-wrap: wrap;
+
 }
 
 .page-header-nav nav ul{
@@ -143,10 +144,6 @@ button:hover {
     opacity: 80%;
 }
 
-.focused {
-    border: 2px solid chocolate !important;
-}
-
 .page-header-nav nav ul .nav-item #grid-button {
     display: flex;
     background: none;
@@ -181,6 +178,9 @@ button:hover {
     align-items: center;
 }
 
+.mobile-header-nav {
+    display: none;
+}
 
 
 /* Body Styles */
@@ -531,15 +531,65 @@ input:checked + .slider:before {
     background-color: var(--light-grey);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 /* Reponsive Header Styles */
 
 .header-logo img {
     width: 150px;
 }
 
+.header-nav-links {
+    display: none;
+}
+
+.mobile-header-nav {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--secondary-purple);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-header-nav .mobile-header-menu h5 {
+    font-weight: 400;
+    display: inline;
+}
+
+.mobile-header-nav .mobile-header-menu button {
+    display: inline;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: var(--grey);
+}
+
+.mobile-header-nav .mobile-nav-links .nav-item {
+    display: block;
+    width: 100%;
+    float: right;
+}
+
+/* inactive */
+.mobile-header-nav .mobile-nav-links {
+    display: none;
+}
+
 /* Reponsive Body Styles */
 
 /* Reponsive Footer Styles */
+
+
+/* active classes */
+
+.mobile-nav-links-active  {
+    text-align: right;
+    list-style: none;
+    font-size: 1.25rem;
+    padding-right: 1.75em;
+    margin: 0;
+}
 
 }
