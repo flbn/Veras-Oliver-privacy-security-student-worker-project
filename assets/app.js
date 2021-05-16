@@ -2,6 +2,7 @@
 	"use strict";
 	// Add Scripts Here
 
+	/* Adding interactivity to the show details button */
 	const showDetailsButton = document.querySelector('.show-details-button');
 	const detailsContainer = document.querySelector('.account-details-container');
 	const accountsContainer = document.querySelector('.accounts-container');
@@ -11,7 +12,7 @@
 		detailsContainer.classList.toggle('account-details-container-active');
 	});
 
-
+	/* Adding interactivity to the menu button (mobile only) */
 	const menuButton = document.querySelector('.menu-button');
 	const navLinks = document.querySelector('.mobile-nav-links');
 	menuButton.addEventListener("click", () => {
