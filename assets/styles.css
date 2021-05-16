@@ -5,6 +5,7 @@
   --blue: RGBA(0, 117, 226, 1);
   --white: RGBA(254, 255, 255, 1);
   --grey: RGBA(128, 128, 128, 1);
+  --light-grey: RGBA(242.5, 242.5, 242.5, 1);
   --grey-seeThrough: RGBA(188, 188, 189, 0.3);
 }
 
@@ -33,7 +34,6 @@ body {
     background-image: url("/assets/img/background.svg");
     background-color: var(--white);
     background-size: cover;
-    background-attachment: fixed;
     background-position: center; 
 }
 
@@ -188,7 +188,7 @@ button:hover {
 .main-content {
     display: block;
     width: 100%;
-    min-height: 100%;
+    min-height: 90vh;
     padding: 130px 155px 200px 155px;
 }
 
@@ -198,7 +198,7 @@ button:hover {
     justify-content: space-between;
     align-items: baseline;
     line-height: 0.75;
-    border-bottom: 2.5px solid lightgrey;
+    border-bottom: 2.5px solid lightgray;
 }
 
 .main-content .article-head h1 {
@@ -218,6 +218,7 @@ button:hover {
 .main-content .alias-button {
     font-size: 1.25rem;
     font-weight: 300;
+    letter-spacing: .05rem;
     background-color: var(--blue);
     color: var(--white);
     border: none;
@@ -265,7 +266,7 @@ button:hover {
 }
 
 .slider-label {
-    padding-right: 5px;
+    padding-right: 10px;
 }
 
 .switch {
@@ -322,6 +323,7 @@ input:checked + .slider:before {
     transform: translateX(16.5px);
 }
 
+/* inactive class */
 .accounts-container {
     display: flex;
     justify-content: space-between;
@@ -399,11 +401,56 @@ input:checked + .slider:before {
 .account-email-info .email-info-text p {
     font-size: 1.15rem;
     color: var(--grey);
- }
+}
 
- .disclaimer-container {
+
+/* inactive class */
+.account-details-container {
+    display: none;
+}
+
+.account-details-container .account-details-content > * {
+    color: var(--grey);
+    display: inline-block;
+}
+
+.account-details-container .account-details-content {
+    padding: 10px 0px;
+}
+
+.account-details-container .account-details-created h4, .account-details-container .account-details-email h4 {
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+} 
+
+.account-details-container .account-details-created p, .account-details-container .account-details-email p {
+    color: #000;
+    padding: 0;
+    margin: 0;
+} 
+
+.account-details-container .account-details-email {
+    margin-left: 50px;
+}   
+
+.account-details-container .account-details-delete {
+    display: inline-block;
+}
+
+.account-details-container .account-details-delete button {
+    border: none;
+    font-size: 1.15rem;
+    letter-spacing: .05rem;
+    color: var(--grey);
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 7.5px;
+}
+
+.disclaimer-container {
     margin-top: 25px;
- }
+}
 
 /* Footer Styles */
 
@@ -458,6 +505,31 @@ input:checked + .slider:before {
 .fa-github {
     font-size: 1.5rem;
 } 
+
+/* active classes */
+
+.accounts-container-active {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.arrow-button-active {
+    transform: scaleY(-1);
+}
+
+.account-details-container-active {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--light-grey);
+}
 
 @media screen and (max-width: 800px) {
 /* Reponsive Header Styles */

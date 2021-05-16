@@ -14,8 +14,6 @@
     <meta name="author" content="Oliver Veras" >
     <meta name="description" content="My submission for the Security and Privacy internship at Mozilla. Feel free to explore my personal site and maybe leave me a sketch at https://www.ovrs.io or have a look around on my digital stream at https://stream.ovrs.io. Thanks for considering me! :)">
     <meta name="keywords" content="Mozilla, UI, HTML, CSS, JavaScript">
-
-    <script src="assets/app.js"></script>
 </head>
 
 <body>
@@ -97,11 +95,11 @@
                     <div class="accounts-container font-metropolis">
                         <div>
                             <div class="account-name">
-                                <h3>sw4wo4v1s@relay.firefox.com</h3><button><i class="far fa-copy"></i></button>
+                                <h3>sw4wo4v1s@relay.firefox.com</h3><button onclick="test()"><i class="far fa-copy"></i></button>
                             </div>
     
                             <div class="show-details">
-                               <p>Show Details</p><button><i class="fas fa-chevron-down"></i></button>
+                               <p>Show Details</p><button class="show-details-button"><i class="fas fa-chevron-down"></i></button>
                             </div>
                         </div>
 
@@ -112,6 +110,24 @@
                             <div class="email-info-text  email-info-active">
                                 <p><span>0</span> Forwarded</p>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="account-details-container font-metropolis">
+                        <div class="account-details-content">
+                            <div class="account-details-created">
+                                <h4>Created:</h4>
+                                <p>May 10, 2021</p>
+                            </div>
+    
+                            <div class="account-details-email">
+                                <h4>Forward emails to</h4>
+                                <p>mcrawford@mozilla.com</p>
+                            </div>
+                        </div>
+
+                        <div class="account-details-delete">
+                            <button>Delete</button>
                         </div>
                     </div>
 
@@ -161,6 +177,7 @@
         Example usage: <i class="fas fa-toggle-off"></i>
      -->
     <script src="https://kit.fontawesome.com/4c55e184d1.js" crossorigin="anonymous"></script>
+    <script src="assets/app.js"></script>
 </body>
 
 </html>
