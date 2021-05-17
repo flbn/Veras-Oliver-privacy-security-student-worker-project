@@ -412,6 +412,10 @@ input:checked + .slider:before {
     display: none;
 }
 
+.account-details-container .account-details-content .mobile-account-email-info {
+    display: none;
+}
+
 .account-details-container .account-details-content > * {
     color: var(--grey);
     display: inline-block;
@@ -536,8 +540,16 @@ input:checked + .slider:before {
 @media screen and (max-width: 1000px) {
 
 /* Reponsive Header Styles */
+.page-header {
+    padding: 1em 1em;
+    z-index: 10;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
 .header-logo img {
-    width: 150px;
+    width: 200px;
 }
 
 .header-nav-links {
@@ -554,6 +566,9 @@ input:checked + .slider:before {
     padding: 5px 0px;
     width: 100%;
     text-align: center;
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.75);
 }
 
 .mobile-header-nav .mobile-header-menu h5 {
@@ -644,6 +659,10 @@ input:checked + .slider:before {
 
     /* Reponsive Header Styles */
 
+    .page-header-nav nav ul .nav-item {
+        padding-left: 1em;
+    } 
+
     /* Reponsive Body Styles */
     .main-content {
         padding: 50px 25px 150px 25px;
@@ -652,9 +671,68 @@ input:checked + .slider:before {
     .accounts-container {
         padding: 10px 15px;
     }
+
+    .account-name button {
+        margin-left: 2.5px;
+    }
     
     .accounts-container .account-email-info {
         display: none;
+    }
+
+    .account-details-container .account-details-content {
+        display: block;
+        width: 100%;
+    }
+
+    .account-details-container .account-details-content .mobile-account-email-info {
+        display: block;
+        width: 100%;
+    }
+
+    .account-details-container .account-details-content .mobile-account-email-info span {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: #000;
+        padding: 0;
+        line-height: 2rem;
+        float: right;
+    }
+
+    .account-details-container .account-details-content .mobile-account-email-info p {
+        text-align: left;
+    }
+
+    .mobile-account-email-info .email-info-inactive {
+        opacity: 0.25;
+    }
+
+    .account-details-content .account-details-created {
+        display: block;
+        text-align: right;
+    }
+
+    .account-details-content .account-details-created h4 {
+        display: inline;
+        float: left;
+    }
+
+    .account-details-content .account-details-created p {
+        display: inline;
+        text-align: right;
+    }
+
+    .account-details-content .account-details-email {
+        display: none;
+    }
+
+    .account-details-container .account-details-delete {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .account-details-container .account-details-delete button {
+        width: 100%;
     }
     
     /* Reponsive Footer Styles */
